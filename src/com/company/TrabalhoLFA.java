@@ -5,7 +5,10 @@ import java.util.ArrayList;
 public class TrabalhoLFA {
 
     public static ArrayList<Regra> regras = new ArrayList<>();
+    public static ArrayList<StringBuilder> matriz = new ArrayList<>();
+
     public static void main(String[] args) {
+
 	// write your code here
         regras = Arquivo.lerArquivo(args[0]);
 
@@ -20,6 +23,12 @@ public class TrabalhoLFA {
         for (Regra regra:regras) {
             System.out.println(regra.variavel + " =>> " + regra.producao);
         }
+
+        String palavra = args[1];
+        System.out.println(palavra);
+
+        Arquivo.escreveArquivo(args[2], matriz);
+        System.out.println(args[2]);
 
     }
 }

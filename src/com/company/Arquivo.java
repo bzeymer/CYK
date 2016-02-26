@@ -1,9 +1,6 @@
 package com.company;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -20,7 +17,6 @@ class Arquivo{
             String entrada;
             int i=0;
             while ((entrada = br.readLine())!= null){
-                System.out.println(entrada);
                 Regra regra = new Regra();
                 regra.variavel += entrada.charAt(0);
                 entrada = entrada.substring(5);
@@ -38,8 +34,19 @@ class Arquivo{
                 }
                 regras.add(regra);
             }
-        } catch(IOException e) { }
+            br.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+
+
         return regras;
+    }
+
+    static void escreveArquivo (String nomeArquivo, ArrayList matriz){
+
     }
 
 }
