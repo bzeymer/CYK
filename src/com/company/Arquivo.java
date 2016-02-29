@@ -41,11 +41,11 @@ class Arquivo{
             e.printStackTrace();
         }
 
-
+        // file utils!!
         return regras;
     }
 
-    static void escreveArquivo (String nomeArquivo, ArrayList matriz){
+    static void escreveArquivo (String nomeArquivo, String[][] matriz){
 
     }
 
